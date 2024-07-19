@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:ship_to_naija/core/apptheme.dart';
 import 'package:ship_to_naija/core/sizeConfig.dart';
@@ -8,6 +9,7 @@ import 'package:ship_to_naija/custom/auth_footer.dart';
 import 'package:ship_to_naija/custom/btn.dart';
 import 'package:ship_to_naija/custom/txt.dart';
 import 'package:ship_to_naija/src/auth/presentation/login_view.dart';
+import 'package:ship_to_naija/src/dashboard/views/dash_board_view.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -42,7 +44,7 @@ class _RegisterViewState extends State<RegisterView> {
     ),
       bottomNavigationBar: AuthFooter(
           text: "Existing user? ",
-          clickable: "Login up!",
+          clickable: "Login!",
           onTap: () => Navigator.push(context,
               MaterialPageRoute(builder: (context) => const LoginView()))),
     );
@@ -156,14 +158,14 @@ class _RegisterViewState extends State<RegisterView> {
             const SizedBox(
               height: 10,
             ),
-            FadeInRight(
-              delay: const Duration(milliseconds: 100),
+            FadeInLeft(
+              delay: const Duration(milliseconds: 80),
               child: Btn(
-                text: "sign_up",
-                onPressed: () {
-                  // registerController.registerMethod(context);
-                },
-              ),
+                  text: "Sign up ",
+                  iconData: Iconsax.arrow_right_1,
+                  onPressed: () {
+
+                  }),
             ),
 
 
